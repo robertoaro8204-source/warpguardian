@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://robertoaro8204-source.github.io/warpguardian/sitemap.xml
