@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WarpGuardian — El internet que no se corta</title>
+<meta name="description" content="WarpGuardian Centinela mantiene Cloudflare WARP conectado 24/7 en Windows: se adelanta a los cortes, se repara solo y te dice quién tuvo la culpa de cada caída.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+:root{--bg:#070b16;--card:#0d1426;--cy:#00e5ff;--gr:#34ff96;--tx:#e2e8f0;--mut:#6a7894}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Segoe UI',Roboto,Arial,sans-serif;
+background-image:repeating-linear-gradient(0deg,rgba(0,229,255,.03) 0 1px,transparent 1px 32px),
+repeating-linear-gradient(90deg,rgba(0,229,255,.03) 0 1px,transparent 1px 32px)}
+.wrap{max-width:960px;margin:0 auto;padding:24px 18px 60px}
+header{display:flex;align-items:center;justify-content:space-between;padding:6px 0 22px}
+.logo{font-size:20px;font-weight:800;letter-spacing:3px;color:#fff;text-shadow:0 0 16px rgba(0,229,255,.9)}
+.logo small{color:var(--cy);font-size:11px;letter-spacing:2px;display:block;margin-top:2px;font-weight:600}
+.tag{color:var(--mut);font-size:12px;letter-spacing:1px}
+.hero{text-align:center;padding:44px 10px 30px}
+h1{font-size:44px;margin:0 0 10px;line-height:1.1;color:#fff;text-shadow:0 0 26px rgba(0,229,255,.55)}
+h1 span{color:var(--cy)}
+.hero p{color:var(--mut);font-size:17px;max-width:640px;margin:0 auto 30px}
+.btn{display:inline-block;background:linear-gradient(135deg,rgba(0,229,255,.16),rgba(52,255,150,.12));
+color:#fff;border:1px solid var(--cy);border-radius:12px;padding:16px 34px;font-size:18px;font-weight:700;
+text-decoration:none;letter-spacing:1px;box-shadow:0 0 26px rgba(0,229,255,.25);transition:all .2s}
+.btn:hover{box-shadow:0 0 40px rgba(0,229,255,.55);transform:translateY(-2px)}
+.note{color:var(--mut);font-size:12px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:40px 0}
+.card{background:var(--card);border:1px solid rgba(0,229,255,.2);border-radius:14px;padding:20px;
+box-shadow:0 0 18px rgba(0,229,255,.05)}
+.card h3{margin:0 0 8px;font-size:16px;color:var(--cy);letter-spacing:.5px}
+.card.green h3{color:var(--gr)}
+.card p{margin:0;color:var(--mut);font-size:13.5px;line-height:1.55}
+.promise{background:linear-gradient(135deg,rgba(52,255,150,.07),rgba(0,229,255,.06));
+border:1px solid rgba(52,255,150,.35);border-radius:16px;padding:26px;margin:10px 0 34px;text-align:center}
+.promise h2{margin:0 0 10px;color:var(--gr);font-size:24px;text-shadow:0 0 18px rgba(52,255,150,.5)}
+.promise p{color:var(--tx);font-size:15px;max-width:720px;margin:0 auto;line-height:1.6}
+.promise small{display:block;margin-top:12px;color:var(--mut);font-size:12.5px}
+.steps{counter-reset:paso;margin:20px 0}
+.steps h2{font-size:22px;color:#fff;text-shadow:0 0 14px rgba(0,229,255,.4)}
+.step{display:flex;gap:14px;align-items:flex-start;background:var(--card);
+border:1px solid rgba(0,229,255,.15);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.step:before{counter-increment:paso;content:counter(paso);min-width:34px;height:34px;border-radius:50%;
+border:1px solid var(--cy);color:var(--cy);display:flex;align-items:center;justify-content:center;
+font-weight:800;font-size:15px;box-shadow:0 0 10px rgba(0,229,255,.3)}
+.step p{margin:2px 0 0;color:var(--tx);font-size:14px}.step p b{color:var(--gr)}
+footer{text-align:center;color:var(--mut);font-size:12px;border-top:1px solid rgba(0,229,255,.12);
+padding-top:18px;margin-top:44px;letter-spacing:.5px}
+@media(max-width:600px){h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">WARPGUARDIAN<small>CENTINELA v5.0</small></div>
+  <div class="tag">PARA WINDOWS 10 / 11 · GRATIS</div>
+</header>
+
+<section class="hero">
+  <h1>El internet que <span>no se corta</span>.</h1>
+  <p>WarpGuardian mantiene Cloudflare WARP (1.1.1.1) conectado las 24 horas del día:
+  vigila cada 5 segundos, se adelanta a los cortes antes de que ocurran, se repara solo
+  en 5 niveles y te dice exactamente quién tuvo la culpa de cada caída.</p>
+  <a class="btn" href="https://github.com/robertoaro8204-source/warpguardian/releases/latest/download/WarpGuardianSetup.exe">&#11015; DESCARGAR EL INSTALADOR (.exe)</a>
+  <div class="note">~56 MB · doble clic &#8594; aceptar permisos &#8594; se instala todo solo (incluye el Cloudflare WARP oficial) · sin publicidad, sin cuentas</div>
+</section>
+
+<section class="promise">
+  <h2>La promesa</h2>
+  <p>Mientras tu PC tenga luz y tu línea exista, <b>WARP no se cae</b>. Los microcortes ya no
+  te tumban: el túnel los aguanta y el Centinela lo revive todo solo. Si algo intenta matar a WARP,
+  el propio Windows lo resucita en 2 segundos — una y otra vez, sin límite.</p>
+  <small>Honestidad total: lo único que puede dejarte sin internet es un apagón o una avería total
+  de tu operadora. Y hasta en ese caso, WarpGuardian registra el corte, identifica al culpable
+  y reconecta solo en cuanto vuelve la línea.</small>
+</section>
+
+<section class="grid">
+  <div class="card"><h3>&#128737; Vigilancia 24/7</h3>
+  <p>Comprueba WARP cada 5 segundos y verifica con Cloudflare que el túnel pasa tráfico de verdad
+  (warp=on). Si se cae, reconecta en segundos y no se rinde jamás.</p></div>
+
+  <div class="card green"><h3>&#9889; Anti-microcortes</h3>
+  <p>Desactiva el ahorro de energía de la tarjeta de red (el asesino silencioso de las conexiones)
+  y lo deja grabado en el registro para que sobreviva a los reinicios.</p></div>
+
+  <div class="card"><h3>&#128274; Blindaje anti-caídas</h3>
+  <p>Configura Windows para resucitar el servicio de WARP en 2 segundos si algo lo mata.
+  Primera línea: Windows. Segunda: el Centinela. Nada lo tumba.</p></div>
+
+  <div class="card green"><h3>&#128302; Precognición</h3>
+  <p>Índice de salud 0–100 en tiempo real (latencia, jitter, pérdida). Si el túnel agoniza,
+  lo recicla preventivamente <i>antes</i> del corte total.</p></div>
+
+  <div class="card"><h3>&#128745; Caja negra</h3>
+  <p>Como la de un avión: graba los 3 minutos previos a cada corte e identifica al culpable
+  — PC, router/WiFi, operadora o Cloudflare. Prueba documental para reclamar.</p></div>
+
+  <div class="card green"><h3>&#128241; Panel móvil sin apps</h3>
+  <p>Mira el estado desde el teléfono en tu WiFi (http://ip-del-pc:8787): salud, latencia,
+  tráfico y cortes en vivo. Solo lectura y solo en tu red local.</p></div>
+</section>
+
+<section class="promise" style="border-color:rgba(0,229,255,.35)">
+  <h2 style="color:var(--cy);text-shadow:0 0 18px rgba(0,229,255,.5)">Si Windows te muestra un aviso azul, es normal</h2>
+  <p>Al abrir el instalador puede salir <b>"Windows protegió su PC"</b> (SmartScreen). <b>No es un virus</b>:
+  es el aviso estándar de Windows para cualquier programa nuevo de un desarrollador independiente que aún no ha
+  pagado un certificado de firma digital. Windows Defender analiza el archivo y <b>no detecta ninguna amenaza</b>.</p>
+  <p style="margin-top:12px">Para continuar: pulsa <b>"Más información"</b> y luego <b>"Ejecutar de todas formas"</b>.</p>
+  <small>Transparencia total: WarpGuardian funciona 100% en tu PC, no envía datos a nadie, no tiene publicidad
+  ni cuentas, y puedes desinstalarlo cuando quieras desde Configuración de Windows &rarr; Aplicaciones.</small>
+</section>
+
+<section class="steps">
+  <h2>Instalación en 4 pasos</h2>
+  <div class="step"><p>Descarga <b>WarpGuardianSetup.exe</b> con el botón de arriba.</p></div>
+  <div class="step"><p>Doble clic al instalador y acepta el aviso de permisos de Windows (UAC).</p></div>
+  <div class="step"><p>Pulsa <b>"INSTALAR AHORA"</b>: se copia a Archivos de programa, instala Cloudflare WARP si falta, programa el vigilante para arrancar con Windows y refuerza la red anti-microcortes.</p></div>
+  <div class="step"><p>Listo: abre <b>"WARP Panel"</b> desde el Escritorio. La app queda en "Aplicaciones instaladas" de Windows con su desinstalador oficial.</p></div>
+</section>
+
+<footer>WARPGUARDIAN CENTINELA v5.0 · Hecho para que tu internet no se caiga nunca ·
+El vigilante corre como SYSTEM, consume ~20 MB de RAM y no envía datos a nadie.</footer>
+
+</div>
+</body>
+</html>
+
+
